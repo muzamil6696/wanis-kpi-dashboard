@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wanis | Warehouse Performance</title>
+<meta name="theme-color" content="#10283f">
+<style>
+:root{font-family:Inter,Segoe UI,Arial,sans-serif;color:#183047;background:#f3f6fa}*{box-sizing:border-box}body{margin:0}header{background:#10283f;color:white;padding:20px clamp(18px,4vw,60px);display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap} .brand{display:flex;gap:15px;align-items:center}.mark{width:46px;height:46px;background:#e8ad39;color:#10283f;border-radius:12px;display:grid;place-items:center;font-size:24px;font-weight:900}.brand strong{font-size:22px;letter-spacing:.06em}.brand small{display:block;color:#c4d5e4;margin-top:3px;font-size:12px}.topright{display:flex;align-items:center;gap:15px;color:#d7e2ed;font-size:13px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#55c78c;margin-right:7px}button{font:inherit;cursor:pointer}.full{border:1px solid #63788b;border-radius:9px;background:transparent;color:white;padding:10px 14px}.wrap{max-width:1660px;margin:auto;padding:30px clamp(18px,4vw,60px)}.eyebrow{color:#66829b;text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:800}.title{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}.title h1{font-size:clamp(26px,3vw,37px);margin:7px 0 8px}.title p{margin:0;color:#6c7e8d;font-size:14px}.badge{background:#e8f4ee;color:#26764a;padding:9px 13px;border-radius:30px;font-size:12px;font-weight:700}.nav{display:flex;flex-wrap:wrap;gap:10px;margin:29px 0 22px}.tab{background:white;color:#455e72;border:1px solid #dce5ed;padding:13px 19px;border-radius:10px;font-weight:700;display:flex;gap:10px;align-items:center}.tab.active{background:#153a58;color:white;border-color:#153a58;box-shadow:0 6px 14px #173a5820}.soon{font-size:10px;background:#edf1f5;color:#8292a1;padding:4px 7px;border-radius:20px}.tab.active .soon{background:#395b74;color:white}.panel{background:white;border:1px solid #dfe7ef;border-radius:15px;overflow:hidden;box-shadow:0 10px 32px #1c3b5810}.panelhead{padding:21px 24px;border-bottom:1px solid #e8eef3;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.panelhead h2{margin:0;font-size:19px}.panelhead p{margin:5px 0 0;color:#718494;font-size:13px}.actions{display:flex;gap:8px}.action{border:1px solid #dce6ee;background:#fff;border-radius:8px;padding:9px 12px;color:#35536a;font-weight:600;font-size:12px}.frame{height:min(75vw,900px);min-height:580px;background:#f8fafc;position:relative}iframe{width:100%;height:100%;border:0;display:block}.placeholder{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}.icon{font-size:42px;margin-bottom:12px}.placeholder h3{font-size:23px;margin:0 0 10px}.placeholder p{max-width:520px;line-height:1.7;color:#738697;margin:0 auto 20px}.notice{background:#fff7e6;border:1px solid #f1dbac;color:#805b15;padding:13px 16px;border-radius:9px;max-width:650px;margin:0 auto;font-size:13px;line-height:1.5}.footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;margin:22px 0;color:#8796a5;font-size:12px}.hidden{display:none!important}@media(max-width:700px){header{padding:16px}.wrap{padding:22px 15px}.tab{padding:11px 12px;font-size:12px}.frame{min-height:520px}.panelhead{padding:18px}.topright{width:100%;justify-content:space-between}}:fullscreen .wrap{max-width:none;padding:15px}:fullscreen .frame{height:calc(100vh - 250px)}
+
+/* Full-height dashboard layout: the embedded report owns the only vertical scrolling area. */
+html,body{height:100%;overflow:hidden}
+body{display:flex;flex-direction:column;min-height:0}
+header{flex:0 0 auto;padding:10px 24px}
+.mark{width:36px;height:36px;font-size:19px}
+.brand strong{font-size:18px}
+.wrap{width:100%;max-width:none;flex:1 1 auto;min-height:0;display:flex;flex-direction:column;padding:0}
+.title,.footer{display:none}
+.nav{flex:0 0 auto;margin:0;padding:9px 20px;gap:8px;background:#edf2f7;border-bottom:1px solid #dce5ed}
+.tab{padding:9px 13px;border-radius:7px}
+.panel{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;border:0;border-radius:0;box-shadow:none}
+.panelhead{flex:0 0 auto;padding:9px 22px}
+.panelhead h2{font-size:16px}
+.panelhead p{font-size:12px;margin:2px 0 0}
+.frame{flex:1 1 auto;min-height:0;height:auto;background:#fff}
+iframe{width:100%;height:100%;display:block}
+.placeholder{overflow-y:auto}
+@media(max-width:700px){header{padding:9px 12px}.topright{width:auto}.topright>span{display:none}.nav{padding:8px;gap:5px}.tab{padding:8px;font-size:11px}.panelhead{padding:8px 12px}.panelhead p{display:none}.actions{gap:4px}.action{padding:7px;font-size:11px}}
+:fullscreen .wrap{max-width:none;padding:0}
+:fullscreen .frame{height:auto}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="mark">W</div><div><strong>WANIS</strong><small>WAREHOUSE PERFORMANCE PORTAL</small></div></div><div class="topright"><span><span class="dot"></span>Performance reporting</span><button class="full" id="fullscreen">⛶ &nbsp;Full screen</button></div></header>
+<main class="wrap"><div class="title"><div><div class="eyebrow">Operations intelligence / Weekly management review</div><h1>Warehouse KPI Dashboard</h1><p>Department performance, operational trends and year-to-date comparisons.</p></div><span class="badge">● &nbsp;Dashboard rollout in progress</span></div>
+<nav class="nav" aria-label="Departments"><button class="tab active" data-page="picking">▥ &nbsp;Order Picking</button><button class="tab" data-page="overview">◫ &nbsp;Overview <span class="soon">Soon</span></button><button class="tab" data-page="goodsin">▤ &nbsp;Goods In <span class="soon">Soon</span></button><button class="tab" data-page="goodsout">▣ &nbsp;Goods Out <span class="soon">Soon</span></button><button class="tab" data-page="packing">▦ &nbsp;Packing Room <span class="soon">Soon</span></button></nav>
+<section class="panel"><div class="panelhead"><div><h2 id="sectionTitle">Order Picking Performance</h2><p id="sectionDesc">Picking volumes, productivity and historical trends.</p></div><div class="actions"><button class="action" id="refresh">↻ &nbsp;Reload report</button><button class="action" id="open">↗ &nbsp;Open report</button></div></div><div class="frame"><iframe id="report" title="Order Picking Power BI dashboard" allowfullscreen class="hidden" referrerpolicy="strict-origin-when-cross-origin"></iframe><div id="empty" class="placeholder"><div><div class="icon" id="emptyIcon">▥</div><h3 id="emptyTitle">Order Picking dashboard</h3><p id="emptyText">The portal is ready. Add the published Power BI link to the configuration in this HTML file to display the interactive dashboard here.</p><div class="notice" id="emptyNotice">Setup required: replace <b>PASTE_PICKING_PUBLISH_TO_WEB_URL_HERE</b> with the Order Picking report's Power BI “Publish to web” link.</div></div></div></div></section>
+<div class="footer"><span>© <span id="year"></span> Wanis International Foods · Warehouse Operations</span><span>Data reflects the most recent refresh of the Power BI dataset.</span></div></main>
+<script>
+// CONFIGURATION: replace the placeholder below with the PUBLIC "Publish to web" URL for your Picking report.
+// IMPORTANT: Power BI "Publish to web" makes report data accessible to anyone on the internet.
+const REPORTS = {
+  picking: 'https://app.powerbi.com/view?r=eyJrIjoiNGQ1NzgzYjktMTEyYi00M2QxLWFlMTItMTM4MGVmN2IwMGMyIiwidCI6IjkzNDBkYWJkLWQyZWQtNDVkYi1hZTIwLTVhNzMxOTBkZGI3MSJ9',
+  overview: '', goodsin: '', goodsout: '', packing: ''
+};
+const INFO={picking:['Order Picking Performance','Picking volumes, productivity and historical trends.'],overview:['Operational Overview','An at-a-glance view of warehouse performance.'],goodsin:['Goods In Performance','Inbound deliveries and pallets received.'],goodsout:['Goods Out Performance','Dispatch volumes and trends.'],packing:['Packing Room Performance','Packing volumes and team performance.']};
+let selected='picking';const frame=document.getElementById('report'),empty=document.getElementById('empty');
+function validUrl(url){try{return new URL(url).hostname==='app.powerbi.com' && url.startsWith('https://app.powerbi.com/view?')}catch{return false}}
+function show(page){selected=page;document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.page===page));document.getElementById('sectionTitle').textContent=INFO[page][0];document.getElementById('sectionDesc').textContent=INFO[page][1];const url=REPORTS[page];const live=validUrl(url);frame.classList.toggle('hidden',!live);empty.classList.toggle('hidden',live);document.getElementById('open').disabled=!live;document.getElementById('refresh').disabled=!live;if(live){if(frame.src!==url)frame.src=url;frame.title=INFO[page][0]}else{frame.removeAttribute('src');document.getElementById('emptyIcon').textContent=page==='picking'?'▥':'◫';document.getElementById('emptyTitle').textContent=page==='picking'?'Order Picking dashboard':'Coming soon';document.getElementById('emptyText').textContent=page==='picking'?'The portal is ready. Add the published Power BI link to the configuration in this HTML file to display the interactive dashboard here.':`${INFO[page][0]} is being prepared and will be available here shortly.`;document.getElementById('emptyNotice').classList.toggle('hidden',page!=='picking')}}
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>show(b.dataset.page)));
+document.getElementById('refresh').addEventListener('click',()=>{if(validUrl(REPORTS[selected]))frame.src=REPORTS[selected]});
+document.getElementById('open').addEventListener('click',()=>{if(validUrl(REPORTS[selected]))window.open(REPORTS[selected],'_blank','noopener,noreferrer')});
+document.getElementById('fullscreen').addEventListener('click',()=>{if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen?.()});
+document.getElementById('year').textContent=new Date().getFullYear();show('picking');
+</script></body></html>
